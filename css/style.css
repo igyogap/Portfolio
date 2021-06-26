@@ -1,0 +1,270 @@
+/*=====================================================================
+FONT
+=====================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=====================================================================
+Navbar
+=====================================================================*/
+.navbar {
+  background-color: #191516;
+  font-family: 'Bebas Neue', cursive;
+}
+.navbar .navbar-brand {
+  color: #02f9f0;
+  font-size: 2em;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: #02f9f0;
+  font-size: 1.5em;
+}
+
+/*=====================================================================
+Section 1 (Profile)
+=====================================================================*/
+
+.section1 {
+  background-color: #191516;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.profile img {
+  width: 250px;
+  margin-top: 57px;
+}
+
+.p1 {
+  margin-top: 20px;
+}
+
+.p1 {
+  color: #03f7eb;
+  font-size: 3em;
+  line-height: 30px;
+}
+
+.p2 {
+  color: #00b295;
+  font-size: 2em;
+  line-height: 1em;
+  letter-spacing: 10px;
+  margin-left: 15px;
+  padding-bottom: 105px;
+}
+
+/*=====================================================================
+Section 2
+=====================================================================*/
+
+.section2 {
+  background-color: #03f7eb;
+  border-radius: 25px;
+  margin-top: -40px;
+  position: relative;
+  padding-bottom: 40px;
+}
+.pendidikan img {
+  width: 250px;
+  margin-top: 50px;
+}
+
+.pendidikan .judul,
+.kemampuan .judul {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2em;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.tahun {
+  font-size: 1.5em;
+  color: #00b397;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  padding: 10px 0 5px 0;
+}
+
+.pendidikan p {
+  line-height: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*=====================================================================
+Section 3
+=====================================================================*/
+
+.section3 {
+  background-color: #00b295;
+  margin-top: -20px;
+  padding-bottom: 70px;
+}
+.kemampuan img {
+  width: 278.2px;
+  margin-top: 90px;
+}
+
+.kemampuan .judul {
+  color: #ab2346;
+}
+
+.kemampuan-pemrograman p,
+.kemampuan-bahasa p {
+  color: #02e6d6;
+  line-height: 10pt;
+}
+
+/*=====================================================================
+Footer
+=====================================================================*/
+
+.footer {
+  background-color: #191516;
+  border-radius: 20px 20px 0px 0px;
+  margin-top: -20px;
+  padding: 20px 0;
+}
+.footer-content {
+  justify-content: space-evenly;
+}
+.brand {
+  color: #02f9f0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+  line-height: 30px;
+}
+
+.navigasi {
+  color: #02f9f0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1em;
+  margin-top: 10px;
+  line-height: 10px;
+}
+.navigasi .nav-link {
+  color: #02f9f0;
+}
+.navigasi a:hover {
+  color: #00b397;
+  transform: scale(1.2);
+}
+.navigasi p {
+  color: #02f9f0;
+  font-size: 1.5em;
+}
+/*=====================================================================
+Dekstop
+=====================================================================*/
+
+@media (min-width: 768px) {
+  .section1,
+  .section2,
+  .section3 {
+    height: 100vh;
+    margin-top: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+    margin-left: 64px;
+  }
+  .profile {
+    display: flex;
+  }
+  .profile img {
+    width: 573px;
+    display: flex;
+    justify-content: left;
+    margin-top: 0;
+  }
+  .job {
+    text-align: right;
+    margin-left: -50px;
+    margin-top: 234px;
+  }
+  .p1 {
+    font-size: 7em;
+  }
+  .p2 {
+    font-size: 5em;
+    margin-right: -10px;
+  }
+
+  .section2 {
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .pendidikan {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .pendidikan img {
+    order: 2;
+    width: 644px;
+    justify-content: right;
+  }
+  .pendidikan-content {
+    order: 1;
+    text-align: left;
+    margin-top: 157px;
+  }
+  .pendidikan-content .judul {
+    font-size: 72px;
+    letter-spacing: 10px;
+    line-height: 93pt;
+  }
+  .tahun {
+    font-size: 48px;
+    line-height: 64pt;
+  }
+  .pendidikan-content p {
+    font-size: 32px;
+    line-height: 16pt;
+  }
+  .kemampuan {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .kemampuan img {
+    width: 644px;
+    margin-top: 104px;
+  }
+  .kemampuan-content {
+    text-align: right;
+    margin-top: 176px;
+  }
+  .kemampuan-content .judul {
+    font-size: 53px;
+    padding-top: 20px;
+    letter-spacing: 5px;
+  }
+  .kemampuan-content p {
+    font-size: 32px;
+    line-height: 23pt;
+  }
+  .footer {
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .footer-content {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .navigasi {
+    font-size: 1.5em;
+    line-height: 20px;
+  }
+  .brand {
+    font-size: 3.5em;
+    line-height: 50px;
+  }
+  .icon svg {
+    width: 50px;
+  }
+}
