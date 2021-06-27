@@ -101,7 +101,9 @@ Section3
 .card img {
   width: 154px;
   height: 168px;
+  border-radius: 10px 10px 0 0;
 }
+
 .card-body a {
   text-decoration: none;
 }
@@ -202,6 +204,7 @@ Dekstop
   .card img {
     width: 351px;
     height: 384px;
+    border-radius: 20px 20px 0 0;
   }
   .card-body a {
     font-size: 1.3em;

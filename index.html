@@ -43,7 +43,7 @@
         <div class="container">
 
             <div class="profile text-center">
-                <img src="img/Profile.png" alt="">
+                <img class="photo-profile" src="img/Profile.png" alt="">
                 <div class="job">
                     <p class="p1">Web Developer</p>
                     <p class="p2">Freelancer</p>
@@ -62,16 +62,16 @@
         <div class="container">
             <div class="pendidikan text-center">
 
-                <img src="img/pendidikan.png" alt="" srcset="">
+                <img class="photo-pendidikan" src="img/pendidikan.png" alt="" srcset="">
                 <div class="pendidikan-content">
                     <p class="judul">pendidikan</p>
-                    <p class="tahun">2017-2021</p>
-                    <p>Institut Teknologi dan Bisnis Stikom Bali</p>
-                    <p>Jurusan : Sistem Informasi</p>
-                    <p>IPK : 3,73</p>
-                    <p class="tahun">2014-2017</p>
-                    <p>SMA N 1 Sukawati</p>
-                    <p>Jurusan : IPA</p>
+                    <p class="tahun thn-kuliah">2017-2021</p>
+                    <p class="kuliah">Institut Teknologi dan Bisnis Stikom Bali</p>
+                    <p class="kuliah">Jurusan : Sistem Informasi</p>
+                    <p class="kuliah">IPK : 3,73</p>
+                    <p class="tahun thn-sma">2014-2017</p>
+                    <p class="sma">SMA N 1 Sukawati</p>
+                    <p class="sma">Jurusan : IPA</p>
                 </div>
             </div>
         </div>
@@ -84,19 +84,19 @@
     <div class="section3">
         <div class="container">
             <div class="kemampuan text-center">
-                <img src="img/programmer.svg" alt="" srcset="">
+                <img class="photo-skill" src="img/programmer.svg" alt="" srcset="">
                 <div class="kemampuan-content">
                     <div class="kemampuan-pemrograman">
-                        <p class="judul">Kemampuan Pemrograman</p>
-                        <p>Framework (Bootstrap, Laravel)</p>
-                        <p>Front-End (HTML, CSS, JS)</p>
-                        <p>Back-End(PHP, MySql)</p>
+                        <p class="judul text1">Kemampuan Pemrograman</p>
+                        <p class="skill1">Framework (Bootstrap, Laravel)</p>
+                        <p class="skill2">Front-End (HTML, CSS, JS)</p>
+                        <p class="skill3">Back-End(PHP, MySql)</p>
                     </div>
                     <div class="kemampuan-bahasa">
-                        <p class="judul">Kemampuan Bahasa</p>
-                        <p>Bahasa Indonesia (Aktif)</p>
-                        <p>Bahasa Inggris (Pasif)</p>
-                        <p>Bahasa Bali (Aktif)</p>
+                        <p class="judul text2">Kemampuan Bahasa</p>
+                        <p class="bhs1">Bahasa Indonesia (Aktif)</p>
+                        <p class="bhs2">Bahasa Inggris (Pasif)</p>
+                        <p class="bhs3">Bahasa Bali (Aktif)</p>
                     </div>
                 </div>
             </div>
@@ -142,6 +142,58 @@
 
     <!--==================== End Footer ====================-->
 
+    <!--====================== Js Import ======================-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+
+    <!--==================== End Js Import ====================-->
+    <!--====================== js ======================-->
+
+    <script type='text/javascript'>
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section2",
+                start: "center center",
+                end: "bottom top",
+                markers: false,
+                scrub: true,
+                pin: true
+            }
+        })
+            .from(".judul", { x: innerWidth * 1 })
+            .from(".thn-kuliah", { x: innerWidth * 1 })
+            .from(".kuliah", { x: innerWidth * 1 })
+            .from(".thn-sma", { x: innerWidth * 1 })
+            .from(".sma", { x: innerWidth * 1 })
+            .from(".photo-pendidikan", { y: innerHeight * 1 })
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".section3",
+                start: "center center",
+                end: "bottom top",
+                markers: false,
+                scrub: true,
+                pin: true
+            }
+        })
+            .from(".photo-skill", { y: innerHeight * 1 })
+            .from(".text1", { y: innerHeight * 1 })
+            .from(".skill1", { x: innerWidth * 1 })
+            .from(".skill2", { x: innerWidth * 1 })
+            .from(".skill3", { x: innerWidth * 1 })
+            .from(".text2", { y: innerHeight * 1 })
+            .from(".bhs1", { x: innerWidth * 1 })
+            .from(".bhs2", { x: innerWidth * 1 })
+            .from(".bhs3", { x: innerWidth * 1 })
+
+
+
+    </script>
+
+    <!--==================== End js ====================-->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
