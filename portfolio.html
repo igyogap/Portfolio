@@ -43,10 +43,10 @@
     <div class="container">
       <div class="header text-center">
         <div class="judul">
-          <p class="p1">Portfolio</p>
-          <p class="p2">My Work</p>
+          <p class="p1 animate-hero">Portfolio</p>
+          <p class="p2 animate-hero">My Work</p>
         </div>
-        <img src="img/portfolio/header-portfolio.svg" alt="">
+        <img class="animate-img" src="img/portfolio/header-portfolio.svg" alt="">
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@
     <div class="container">
       <div class=" row justify-content-center">
         <div class="bagian col-10 d-flex justify-content-evenly">
-          <p class="text1">Project Front-End dan Back-End</p>
+          <p class="animate-bagian">Project Front-End dan Back-End</p>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
     <div class="container">
       <div class="portfolio">
         <div class=" d-flex flex-wrap justify-content-center">
-          <div class="card project1">
+          <div class="card animate-project">
             <img src="img/portfolio/undangan1.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -86,7 +86,7 @@
                 </svg>Github</a>
             </div>
           </div>
-          <div class="card project2">
+          <div class="card animate-project">
             <img src="img/pendidikan.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -99,7 +99,7 @@
                 </svg>Github</a>
             </div>
           </div>
-          <div class="card project3">
+          <div class="card animate-project">
             <img src="img/pendidikan.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -112,7 +112,7 @@
                 </svg>Github</a>
             </div>
           </div>
-          <div class="card project4">
+          <div class="card animate-project">
             <img src="img/Profile.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -125,7 +125,7 @@
                 </svg>Github</a>
             </div>
           </div>
-          <div class="card project5">
+          <div class="card animate-project">
             <img src="img/pendidikan.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -138,7 +138,7 @@
                 </svg>Github</a>
             </div>
           </div>
-          <div class="card project6">
+          <div class="card animate-project">
             <img src="img/pendidikan.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
 
@@ -201,34 +201,42 @@
   <!--====================== js ======================-->
 
   <script type='text/javascript'>
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section2",
-        start: "center bottom",
-        end: "bottom center",
-        markers: true,
-        scrub: true,
-        pin: false
-      }
+    gsap.from('.animate-img', {
+      // scrollTrigger: 'animate-img',
+      duration: 1.2,
+      opacity: 0,
+      // y: -150
     })
-      .from(".text1", { y: innerHeight * 1 })
+    gsap.from('.animate-hero', {
+      duration: 2,
+      opacity: 0,
+      y: -150,
+      stagger: 0.3
+    })
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section3",
-        start: "top 50%",
-        end: "bottom bottom",
-        markers: true,
-        scrub: true,
-        pin: false
-      }
+    gsap.from('.animate-bagian', {
+      scrollTrigger: 'animate-bagian',
+      duration: 1.5,
+      opacity: 0,
+      x: -250,
+      stagger: 0.3,
+      delay: 0.2
     })
-      .from(".project1", { x: innerWidth * -1 })
-      .from(".project2", { y: innerHeight * 1 })
-      .from(".project3", { x: innerWidth * 1 })
-      .from(".project4", { x: innerWidth * -1 })
-      .from(".project5", { y: innerHeight * 1 })
-      .from(".project6", { x: innerWidth * 1 })
+    gsap.from('.animate-project', {
+      scrollTrigger: 'animate-project',
+      duration: 1.5,
+      opacity: 0,
+      y: 250,
+      stagger: 0.3,
+      delay: 0.5
+    })
+    gsap.from('.footer-content', {
+      scrollTrigger: '.footer-content',
+      duration: 1.2,
+      opacity: 0,
+      y: 150,
+      stagger: 0.3,
+    })
 
   </script>
 

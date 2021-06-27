@@ -43,10 +43,10 @@
         <div class="container">
 
             <div class="profile text-center">
-                <img class="photo-profile" src="img/Profile.png" alt="">
+                <img class="animate-hero" src="img/Profile.png" alt="">
                 <div class="job">
-                    <p class="p1">Web Developer</p>
-                    <p class="p2">Freelancer</p>
+                    <p class="p1 animate-hero">Web Developer</p>
+                    <p class="p2 animate-hero">Freelancer</p>
                 </div>
 
             </div>
@@ -64,14 +64,14 @@
 
                 <img class="photo-pendidikan" src="img/pendidikan.png" alt="" srcset="">
                 <div class="pendidikan-content">
-                    <p class="judul">pendidikan</p>
-                    <p class="tahun thn-kuliah">2017-2021</p>
-                    <p class="kuliah">Institut Teknologi dan Bisnis Stikom Bali</p>
-                    <p class="kuliah">Jurusan : Sistem Informasi</p>
-                    <p class="kuliah">IPK : 3,73</p>
-                    <p class="tahun thn-sma">2014-2017</p>
-                    <p class="sma">SMA N 1 Sukawati</p>
-                    <p class="sma">Jurusan : IPA</p>
+                    <p class="judul animate-pendidikan">pendidikan</p>
+                    <p class="tahun animate-pendidikan">2017-2021</p>
+                    <p class=" animate-pendidikan">Institut Teknologi dan Bisnis Stikom Bali</p>
+                    <p class=" animate-pendidikan">Jurusan : Sistem Informasi</p>
+                    <p class=" animate-pendidikan">IPK : 3,73</p>
+                    <p class="tahun animate-pendidikan">2014-2017</p>
+                    <p class=" animate-pendidikan">SMA N 1 Sukawati</p>
+                    <p class=" animate-pendidikan">Jurusan : IPA</p>
                 </div>
             </div>
         </div>
@@ -87,16 +87,16 @@
                 <img class="photo-skill" src="img/programmer.svg" alt="" srcset="">
                 <div class="kemampuan-content">
                     <div class="kemampuan-pemrograman">
-                        <p class="judul text1">Kemampuan Pemrograman</p>
-                        <p class="skill1">Framework (Bootstrap, Laravel)</p>
-                        <p class="skill2">Front-End (HTML, CSS, JS)</p>
-                        <p class="skill3">Back-End(PHP, MySql)</p>
+                        <p class="judul animate-skill">Kemampuan Pemrograman</p>
+                        <p class="animate-skill">Framework (Bootstrap, Laravel)</p>
+                        <p class="animate-skill">Front-End (HTML, CSS, JS)</p>
+                        <p class="animate-skill">Back-End(PHP, MySql)</p>
                     </div>
                     <div class="kemampuan-bahasa">
-                        <p class="judul text2">Kemampuan Bahasa</p>
-                        <p class="bhs1">Bahasa Indonesia (Aktif)</p>
-                        <p class="bhs2">Bahasa Inggris (Pasif)</p>
-                        <p class="bhs3">Bahasa Bali (Aktif)</p>
+                        <p class="judul animate-skill">Kemampuan Bahasa</p>
+                        <p class="animate-skill">Bahasa Indonesia (Aktif)</p>
+                        <p class="animate-skill">Bahasa Inggris (Pasif)</p>
+                        <p class="animate-skill">Bahasa Bali (Aktif)</p>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
 
     <!--====================== Footer ======================-->
 
-    <div class="footer">
+    <div class="footer sticky-top">
         <div class="container">
             <div class="footer-content d-flex ">
                 <p class="brand ">Yoga <br> Pramana</p>
@@ -147,49 +147,55 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
 
+    <script src="js/app.js"></script>
     <!--==================== End Js Import ====================-->
     <!--====================== js ======================-->
 
-    <script type='text/javascript'>
+    <script>
 
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".section2",
-                start: "center center",
-                end: "bottom top",
-                markers: false,
-                scrub: true,
-                pin: true
-            }
+        gsap.from('.animate-hero', {
+            duration: 1.5,
+            opacity: 0,
+            y: -150,
+            stagger: 0.3
         })
-            .from(".judul", { x: innerWidth * 1 })
-            .from(".thn-kuliah", { x: innerWidth * 1 })
-            .from(".kuliah", { x: innerWidth * 1 })
-            .from(".thn-sma", { x: innerWidth * 1 })
-            .from(".sma", { x: innerWidth * 1 })
-            .from(".photo-pendidikan", { y: innerHeight * 1 })
-
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".section3",
-                start: "center center",
-                end: "bottom top",
-                markers: false,
-                scrub: true,
-                pin: true
-            }
+        gsap.from('.animate-pendidikan', {
+            scrollTrigger: '.animate-pendidikan',
+            duration: 1.2,
+            opacity: 0,
+            x: -150,
+            stagger: 0.3,
+            delay: 0.5
         })
-            .from(".photo-skill", { y: innerHeight * 1 })
-            .from(".text1", { y: innerHeight * 1 })
-            .from(".skill1", { x: innerWidth * 1 })
-            .from(".skill2", { x: innerWidth * 1 })
-            .from(".skill3", { x: innerWidth * 1 })
-            .from(".text2", { y: innerHeight * 1 })
-            .from(".bhs1", { x: innerWidth * 1 })
-            .from(".bhs2", { x: innerWidth * 1 })
-            .from(".bhs3", { x: innerWidth * 1 })
+        gsap.from('.photo-pendidikan', {
+            scrollTrigger: '.animate-pendidikan',
+            duration: 1.2,
+            opacity: 0,
+            y: 250,
 
-
+        })
+        gsap.from('.animate-skill', {
+            scrollTrigger: '.animate-skill',
+            duration: 1.2,
+            opacity: 0,
+            x: 150,
+            stagger: 0.3,
+            delay: 0.5
+        })
+        gsap.from('.photo-skill', {
+            scrollTrigger: '.animate-skill',
+            duration: 1.2,
+            opacity: 0,
+            scale: 0,
+            delay: 0.5
+        })
+        gsap.from('.footer-content', {
+            scrollTrigger: '.footer-content',
+            duration: 1.2,
+            opacity: 0,
+            y: 150,
+            stagger: 0.3,
+        })
 
     </script>
 
