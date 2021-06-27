@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
 
     <title>Portfolio Yoga Pramana</title>
 </head>
@@ -17,7 +17,7 @@
 <body>
     <!--====================== Nabar ======================-->
 
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="#">Yoga Pramana</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -37,77 +37,48 @@
 
     <!--==================== End Nabar ====================-->
 
-    <!--====================== Section 1 ======================-->
+    <!--====================== Header ======================-->
 
     <div class="section1">
         <div class="container">
-
-            <div class="profile text-center">
-                <img src="img/Profile.png" alt="">
-                <div class="job">
-                    <p class="p1">Web Developer</p>
-                    <p class="p2">Freelancer</p>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-    <!--==================== End Section 1 ====================-->
-
-    <!--====================== Section 2 ======================-->
-
-    <div class="section2">
-        <div class="container">
-            <div class="pendidikan text-center">
-
-                <img src="img/pendidikan.png" alt="" srcset="">
-                <div class="pendidikan-content">
-                    <p class="judul">pendidikan</p>
-                    <p class="tahun">2017-2021</p>
-                    <p>Institut Teknologi dan Bisnis Stikom Bali</p>
-                    <p>Jurusan : Sistem Informasi</p>
-                    <p>IPK : 3,73</p>
-                    <p class="tahun">2014-2017</p>
-                    <p>SMA N 1 Sukawati</p>
-                    <p>Jurusan : IPA</p>
+            <div class="header text-center">
+                <div class="judul">
+                    <p class="p1">Contact Me</p>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="form-contact">
+                <form class="row  needs-validation" novalidate>
 
-    <!--==================== End Section 2 ====================-->
-
-    <!--====================== Section 3 ======================-->
-
-    <div class="section3">
-        <div class="container">
-            <div class="kemampuan text-center">
-                <img src="img/programmer.svg" alt="" srcset="">
-                <div class="kemampuan-content">
-                    <div class="kemampuan-pemrograman">
-                        <p class="judul">Kemampuan Pemrograman</p>
-                        <p>Framework (Bootstrap, Laravel)</p>
-                        <p>Front-End (HTML, CSS, JS)</p>
-                        <p>Back-End(PHP, MySql)</p>
+                    <div class="mb-1">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" placeholder="Masukan Nama..." required>
                     </div>
-                    <div class="kemampuan-bahasa">
-                        <p class="judul">Kemampuan Bahasa</p>
-                        <p>Bahasa Indonesia (Aktif)</p>
-                        <p>Bahasa Inggris (Pasif)</p>
-                        <p>Bahasa Bali (Aktif)</p>
+                    <div class="mb-1">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Masukan Email..." required>
                     </div>
-                </div>
+                    <div class="mb-1">
+                        <label for="pesan" class="form-label">Pesan</label>
+                        <textarea class="form-control" id="pesan" rows="3" placeholder="Masukan Pesan..."
+                            required></textarea>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="submit">Kirim</button>
+                    </div>
             </div>
+
+
+            </form>
         </div>
     </div>
+    </div>
 
-    <!--==================== End Section 3 ====================-->
+    <!--==================== End Header ====================-->
+
 
     <!--====================== Footer ======================-->
 
-    <div class="footer">
+    <div class="footer ">
         <div class="container">
             <div class="footer-content d-flex ">
                 <p class="brand ">Yoga <br> Pramana</p>
@@ -141,7 +112,28 @@
     </div>
 
     <!--==================== End Footer ====================-->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
 
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
