@@ -174,15 +174,20 @@ Dekstop
   .section3 {
     height: 100vh;
     margin-top: 0;
+    display: flex;
+    align-items: center;
   }
   .navbar .navbar-nav .nav-link {
     margin-left: 64px;
+    font-size: x-large;
   }
   .profile {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .profile img {
-    width: 573px;
+    width: 700px;
     display: flex;
     justify-content: left;
     margin-top: 0;
@@ -193,10 +198,11 @@ Dekstop
     margin-top: 234px;
   }
   .p1 {
-    font-size: 7em;
+    font-size: 8em;
+    line-height: 50px;
   }
   .p2 {
-    font-size: 5em;
+    font-size: 6em;
     margin-right: -10px;
   }
 

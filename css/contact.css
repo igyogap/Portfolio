@@ -118,9 +118,12 @@ Dekstop
   .section1 {
     height: 100vh;
     margin-top: 0;
+    display: flex;
+    align-items: center;
   }
   .navbar .navbar-nav .nav-link {
     margin-left: 64px;
+    font-size: x-large;
   }
   .judul .p1 {
     line-height: 24px;
