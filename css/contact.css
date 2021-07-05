@@ -34,7 +34,7 @@ Navbar
 /*=====================================================================
 Section 1
 =====================================================================*/
-
+/*
 .section1 {
   background-color: #03f7eb;
   padding-top: 72px;
@@ -43,6 +43,9 @@ Section 1
 .header img {
   width: 304px;
   margin-top: -77px;
+}*/
+.section1 {
+  margin: 40px 0 80px 0;
 }
 .judul {
   font-family: 'Bebas Neue', cursive;
@@ -50,11 +53,11 @@ Section 1
 }
 
 .judul .p1 {
-  line-height: 24px;
+  /* line-height: 24px; */
   font-size: 2.5em;
 }
 
-.form-contact {
+/* .form-contact {
   background-color: #c9daea;
   border-radius: 20px;
 }
@@ -62,9 +65,17 @@ Section 1
   width: 255px;
   margin: auto;
   padding: 30px 0;
-}
+} */
 .btn {
   margin: 8px;
+}
+.icon {
+  display: flex;
+  align-items: baseline;
+}
+.icon img {
+  width: 50px;
+  margin-right: 20px;
 }
 /*=====================================================================
 Footer
